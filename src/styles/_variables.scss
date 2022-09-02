@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Oxygen:wght@300;400;700&display=swap');
+@font-face {
+    font-family: 'Zeus';
+    src: url("../assets/fonts/Zeus.ttf") format("truetype");
+}
+
+// breakpoints
+$mobile-breakpoint: 320px;
+$tablet-breakpoint: 768px;
+$tablet-portrait: 820px;
+$desktop-breakpoint: 1024px;
+$medium-desktop-breakpoint: 1280px;
+$large-desktop-breakpoint: 1440px;
+$extra-large-desktop-breakpoint: 2560px;
+
+// variables
+$colour-primary: rgb(217, 206, 147);
+$colour-secondary: #FDF2C4;
+$colour-tertiary: #EEEFBF;
+$colour-white: #f4f4f4;
+$colour-black: #1f1f1f;
+
+// text
+$font-title: "Zeus";
+$font-primary: "Average Sans";
+$font-secondary: "Oxygen";
