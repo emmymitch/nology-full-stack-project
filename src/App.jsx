@@ -11,16 +11,25 @@ const App = () => {
   return (
     <Router>
       <div className="app">
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/update" element={<Update />} />
-          <Route path="/delete" element={<Delete />} />
-          <Route path="/view" element={<View />} />
-          <Route path="/view/:being" element={<Being />} />
+        <div className="col col--left"></div>
 
-      {/* Redirect all other pages to home */}
-          <Route path="*" element={<Navigate to="/home" replace />} />
-        </Routes>
+        <div className="title">
+          <h1>Greek Reference Website</h1>
+        </div>
+
+        <div className="main">
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/update" element={<Update />} />
+            <Route path="/delete" element={<Delete />} />
+            <Route path="/view" element={<View />} />
+            <Route path="/view/:being" element={<Being />} />
+          {/* Redirect all other pages to home */}
+            <Route path="*" element={<Navigate to="/home" replace />} />
+          </Routes>
+        </div>
+
+        <div className="col col--right"></div>
       </div>
     </Router>
   )
