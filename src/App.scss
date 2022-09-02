@@ -8,30 +8,88 @@
   height: 100vh;
   width: 100vw;
 
-  display: grid;
-  grid-template-columns: 15% 70% 15%;
-  grid-template-rows: 10% 90%;
+  display: flex;
+  flex-direction: column;
 
   .col{
-    background-color: antiquewhite;
-
-    &--left{
-      grid-area: 1/1/3/1;
-    }
-
-    &--right{
-      grid-area: 1/3/3/4;
-    }
+    display: none;
   }
 
   .title{
-    grid-area: 1/2/2/3;
-    width: 100%;
-    border-bottom: 1px solid $colour-black;
-  }
+    border-bottom: 25px solid transparent;
+    border-image: url("./assets/images/singleSwirl.png") 150 110 repeat;
 
-  .main{
-    grid-area: 2/2/3/3;
-    overflow-y: scroll;
+    padding: 0.75rem;
+
+    &__style-div{
+      display: none;
+    }
+
+    &__text{
+      background: transparent;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .app {  
+    display: grid;
+    grid-template-columns: 16% 68% 16%;
+    grid-template-rows: 10% 90%;
+  
+    .col{
+      display: block;
+
+      background-image: url("./assets/images/columnNoTop.png");
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+  
+      &--left{
+        grid-area: 2/1/3/1;
+      }
+  
+      &--right{
+        grid-area: 2/3/3/4;
+      }
+    }
+  
+    .title{
+      grid-area: 1/1/2/4;
+
+      background-image: url("./assets/images/singleSwirlLine.png");
+      background-size: contain;
+      border: none;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      &__style-div{
+        display: flex;
+        background: none;
+        width: 80%;
+      }
+  
+      &__text{
+        background-image: url("./assets/images/white\ marble.jpg");
+        background-size: contain;
+        height: 100%;
+        width: 100%;
+  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  
+    .main{
+      grid-area: 2/2/3/3;
+      overflow-y: scroll;
+    }
   }
 }

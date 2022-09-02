@@ -14,7 +14,9 @@ const App = () => {
         <div className="col col--left"></div>
 
         <div className="title">
-          <h1>Greek Reference Website</h1>
+          <div className='title__style-div'></div>
+          <h1 className='title__text'>Greek Mythology Reference</h1>
+          <div className='title__style-div'></div>
         </div>
 
         <div className="main">
