@@ -86,7 +86,11 @@
         justify-content: center;
       }
     }
-  
+    
+    .mobile-nav{
+      display: none;
+    }
+    
     .main{
       grid-area: 2/2/3/3;
       overflow-y: scroll;

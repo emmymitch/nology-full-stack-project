@@ -1,5 +1,21 @@
 @use "../../styles/variables" as *;
 
+.navbar{
+    display: flex;
+    justify-content: space-around;
+
+    padding: 0.5rem 0;
+    border-bottom: 25px solid transparent;
+    border-image: url("../../assets/images/singleSwirl.png") 150 110 repeat;
+
+    &__link{
+        font-family: $font-title;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+}
+
 @media screen and (min-width: $desktop-breakpoint) {
     .navbar{
         height: 60%;
@@ -8,13 +24,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        border: none;
         
         &__link{
             margin: 0.5rem 0;
 
-            font-family: $font-title;
-            font-weight: 600;
-            text-decoration: none;
             color: $colour-white;
             font-size: 1.25rem;
 

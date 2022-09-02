@@ -22,6 +22,10 @@ const App = () => {
           <div className='title__style-div'></div>
         </div>
 
+        <div className='mobile-nav'>
+          <Nav />
+        </div>
+
         <div className="main">
           <Routes>
             <Route path="/home" element={<Home />} />
