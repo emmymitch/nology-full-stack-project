@@ -11,7 +11,12 @@ const App = () => {
   return (
     <Router>
       <div className="app">
-        <div className="col col--left"></div>
+        <div className="navbar col col--left">
+          <h4 className='navbar__link'>Home</h4>
+          <h4 className='navbar__link'>View</h4>
+          <h4 className='navbar__link'>Update</h4>
+          <h4 className='navbar__link'>Delete</h4>
+        </div>
 
         <div className="title">
           <div className='title__style-div'></div>
