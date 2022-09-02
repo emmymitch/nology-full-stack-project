@@ -8,7 +8,11 @@
 }
 
 * {
-    font-family: 'Zeus', 'Average Sans', 'Oxygen', Arial, sans-serif;
+    font-family: 'Oxygen', 'Average Sans', Arial, Helvetica, sans-serif;
     color: $colour-black;
     text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Zeus', Arial, Helvetica, sans-serif;
 }
