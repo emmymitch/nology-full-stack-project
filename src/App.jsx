@@ -6,16 +6,14 @@ import Update from "./pages/Update/Update";
 import Delete from "./pages/Delete/Delete";
 import View from "./pages/View/View";
 import Being from "./pages/Being/Being";
+import Nav from './components/Nav/Nav';
 
 const App = () => {
   return (
     <Router>
       <div className="app">
-        <div className="navbar col col--left">
-          <h4 className='navbar__link'>Home</h4>
-          <h4 className='navbar__link'>View</h4>
-          <h4 className='navbar__link'>Update</h4>
-          <h4 className='navbar__link'>Delete</h4>
+        <div className="col col--left">
+          <Nav />
         </div>
 
         <div className="title">
