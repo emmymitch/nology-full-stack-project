@@ -1,8 +1,113 @@
+import TextInput from "../../components/TextInput/TextInput";
 import "./Update.scss";
+import { useState } from "react";
 
 const Update = () => {
+    const initialData = {
+        englishName: "",
+        greekName: "",
+        majorDomains: [],
+        identifiers: [],
+        description: ""
+    }
+
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    const [formData, setFormData] = useState(initialData)
+
+    const handleChange = (event) => {
+        switch(event.target.name){
+            case "englishName": 
+                setFormData({...formData, englishName: event.target.value});
+                break;
+            case "greekName": 
+                setFormData({...formData, greekName: event.target.value});
+                break;
+            case "description": 
+                setFormData({...formData, description: event.target.value});
+                break;
+            case "majorDomains":
+                setFormData({...formData, majorDomains: [...formData.majorDomains, event.target.value]});
+                break;
+            case "identifiers":
+                setFormData({...formData, identifiers: [...formData.identifiers, event.target.value]});
+                break;
+            default:
+                break;
+        }
+    }
+
+    const handleMultiInputChange = (event) => {
+        console.log(formData);
+    }
+
+    //what the fuck does submitting a form do??? where does the data go??????????
+    const handleSubmit = () => {
+        setFormSubmitted(true);
+        handleReset();
+    }
+
+    const handleReset = () => {
+        setFormData({...initialData});
+    }
+
+
+    const pageJSX = 
+        <form className="update__form" onSubmit={handleSubmit} >
+            <button className="update__form--reset" type="reset" onClick={handleReset}>Reset</button>
+            <br></br>
+
+            <label className="update__form--label" htmlFor="englishName">English Name:</label>
+            <TextInput name={"englishName"} onBlur={handleChange} />
+            <br></br>
+
+            <label className="update__form--label" htmlFor="greekName">Greek Name:</label>
+            <TextInput name={"greekName"} placeholder={"Use Greek characters only"} onBlur={handleChange} />
+            <br></br>
+
+            <label className="update__form--label" htmlFor="majorDomains">Major Domains:</label>
+            <div className="update__form--domain-list">
+                <TextInput name={"majorDomains"} onBlur={handleChange} />
+                <TextInput name={"majorDomains"} onBlur={handleChange} />
+                <TextInput name={"majorDomains"} onBlur={handleChange} />
+                <TextInput name={"majorDomains"} onBlur={handleChange} />
+                {/* Remember to change the sneaky 'check form status' function!! */}
+                <TextInput name={"majorDomains"} onBlur={handleMultiInputChange} />
+            </div>
+            <br></br>
+
+            <label className="update__form--label" htmlFor="identifiers">Identifiers:</label>
+            <div className="update__form--identifier-list">
+                <TextInput name={"identifiers"} placeholder={"e.g. lightning bolts and eagles for Zeus"} onBlur={handleChange} />
+                <TextInput name={"identifiers"} placeholder={"e.g. owls, olives, Aegis for Athena"} onBlur={handleChange} />
+                <TextInput name={"identifiers"} placeholder={"e.g. lyre, bow, laurel for Apollo"} onBlur={handleChange} />
+                <TextInput name={"identifiers"} placeholder={"e.g. a caduceus and winged sandals for Hermes"} onBlur={handleChange} />
+                <TextInput name={"identifiers"} placeholder={"e.g. doves and roses for Aphrodite"} onBlur={handleMultiInputChange} />
+            </div>
+            <br></br>
+
+            <label className="update__form--label" htmlFor="description">Description:</label>
+            <textarea 
+                className="update__form--description" 
+                name="description" 
+                placeholder="A short description of the god. Exclude personal opinions."
+                onBlur={handleChange}
+            />
+            <br></br>
+
+            <input className="update__form--submit" type={"submit"} value="Submit" />
+        </form>
+    ;
+
+    if (formSubmitted){
+        const pageJSX = <h4 className="update__subheading">Entry updated!</h4>
+    }
+
     return (
-        <h1>Update</h1>
+        <div className="update">
+            <h2 className="update__title">Add/Update a God</h2>
+            <h4 className="update__subheading">Is some information wrong, or do you want to add a new entry? Use this form to do so!</h4>
+            {pageJSX}
+        </div>
     )
 }
 

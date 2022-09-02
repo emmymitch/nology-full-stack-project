@@ -1,0 +1,40 @@
+@use "../../styles/variables" as *;
+
+.update{
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        margin: 1rem 0;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--label, &--submit, &--reset{
+            margin: 0.75rem 0 0.25rem 0;
+        }
+
+        &--domain-list, &--identifier-list{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--submit, &--reset{
+            font-family: $font-title;
+            font-weight: 600;
+            color: $colour-white;
+            padding: 0.5rem;
+            background-color: $colour-black;
+            border-radius: 25%;
+        }
+
+        &--description{
+            width: 20rem;
+            height: 5rem;
+            font-size: 0.85rem;
+        }
+    }
+}
