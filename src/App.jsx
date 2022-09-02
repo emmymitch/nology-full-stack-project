@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Navigate, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Update from "./pages/Update/Update";
+import Delete from "./pages/Delete/Delete";
+import View from "./pages/View/View";
+import Being from "./pages/Being/Being";
+
+const App = () => {
+  <Routes>
+    <Route path="/home" element={<Home />} />
+    <Route path="/update" element={<Update />} />
+    <Route path="/delete" element={<Delete />} />
+    <Route path="/view" element={<View />} />
+    <Route path="/view/:being" element={<Being />} />
+
+{/* Redirect all other pages to home */}
+    <Route path="*" element={<Navigate to="/home" replace />} />
+  </Routes>
 }
 
 export default App;
