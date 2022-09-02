@@ -1,4 +1,7 @@
-
 @use "./styles/reset" as *;
 @use "./styles/typography" as *;
 @use "./styles/variables" as *;
+
+.app {
+  background-color: $colour-primary;
+}
