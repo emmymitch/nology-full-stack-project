@@ -114,8 +114,8 @@ const Update = () => {
 
     return (
         <div className="update">
-            <h2 className="update__title">Add/Update a God</h2>
-            <h4 className="update__subheading">Is some information wrong, or do you want to add a new entry? Use this form to do so!</h4>
+            <h1 className="update__title">Add/Update a God</h1>
+            <h3 className="update__subheading">Is some information wrong, or do you want to add a new entry? Use this form to do so!</h3>
             {pageJSX}
         </div>
     )
