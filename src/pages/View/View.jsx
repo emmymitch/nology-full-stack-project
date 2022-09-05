@@ -1,8 +1,13 @@
 import "./View.scss";
+import MythCardContainer from "../../containers/MythCardContainer/MythCardContainer";
 
 const View = () => {
     return (
-        <h1>View</h1>
+        <div className="view">
+            <h1>View All</h1>
+            <MythCardContainer />
+        </div>
+
     )
 }
 

@@ -1,0 +1,25 @@
+@use "../../styles/variables" as *;
+
+.myth-card{
+    max-width: 19rem;
+    height: 22rem;
+    
+    display: flex;
+    border: 2px solid red;
+
+    &__side{
+        padding: 0.75rem;
+
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+
+        background: rgba($colour-black, 0.9);
+
+        &--greek-char{
+            transform: rotateZ(-90deg);
+            color: $colour-white;
+        }
+    }
+}
