@@ -4,6 +4,7 @@ import { useState } from "react";
 
 const Update = () => {
     const initialData = {
+        createdBy: "",
         englishName: "",
         greekName: "",
         majorDomains: [],
@@ -12,10 +13,13 @@ const Update = () => {
     }
 
     const [formSubmitted, setFormSubmitted] = useState(false);
-    const [formData, setFormData] = useState(initialData)
+    const [formData, setFormData] = useState(initialData);
 
     const handleChange = (event) => {
         switch(event.target.name){
+            case "createdBy":
+                setFormData({...formData, createdBy: event.target.value});
+                break;
             case "englishName": 
                 setFormData({...formData, englishName: event.target.value});
                 break;
@@ -54,6 +58,10 @@ const Update = () => {
     const pageJSX = 
         <form className="update__form" onSubmit={handleSubmit} >
             <button className="update__form--reset" type="reset" onClick={handleReset}>Reset</button>
+            <br></br>
+
+            <label className="update__form--label" htmlFor="createdBy">Author:</label>
+            <TextInput name={"createdBy"} onBlur={handleChange} placeholder={"Who's authoring this entry?"} />
             <br></br>
 
             <label className="update__form--label" htmlFor="englishName">English Name:</label>
