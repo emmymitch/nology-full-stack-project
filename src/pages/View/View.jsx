@@ -1,7 +1,7 @@
 import "./View.scss";
 import MythCardContainer from "../../containers/MythCardContainer/MythCardContainer";
 import Button from "../../components/Button/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import myths from "../../data/mockMyth";
 
 const View = () => {
@@ -13,6 +13,10 @@ const View = () => {
 
         setFilteredMyths(mythsToRender);
     }
+
+    useEffect(() => {
+        getMyths();
+    }, [filteredMyths])
 
     return (
         <div className="view">

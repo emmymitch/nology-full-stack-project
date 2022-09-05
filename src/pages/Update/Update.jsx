@@ -47,7 +47,9 @@ const Update = () => {
     }
 
     //what the fuck does submitting a form do??? where does the data go??????????
-    const handleSubmit = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(event.target[0])
         setFormSubmitted(true);
         setFormData({...initialData});
     }

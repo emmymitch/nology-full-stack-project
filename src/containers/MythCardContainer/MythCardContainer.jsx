@@ -4,7 +4,7 @@ import MythCard from "../../components/MythCard/MythCard";
 const MythCardContainer = ({mythsToShow}) => {
 
     const mythCards = mythsToShow.map((myth) => {
-        return <MythCard myth={myth} />
+        return <MythCard key={myth.id} myth={myth} />
     })
 
     return (

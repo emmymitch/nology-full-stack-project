@@ -1,6 +1,6 @@
 import "./TextInput.scss";
 
-const TextInput = ({name, className = "", placeholder, onBlur}) => {
+const TextInput = ({name, className = "", placeholder = "", onBlur = null}) => {
     return (
         <input 
             type="text" 
