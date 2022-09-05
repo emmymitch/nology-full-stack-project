@@ -1,6 +1,8 @@
-import TextInput from "../../components/TextInput/TextInput";
 import "./Update.scss";
+import TextInput from "../../components/TextInput/TextInput";
+import Button from "../../components/Button/Button";
 import { useState } from "react";
+
 
 const Update = () => {
     const initialData = {
@@ -57,7 +59,7 @@ const Update = () => {
 
     let pageJSX = 
         <form className="update__form" onSubmit={handleSubmit} >
-            <button className="update__form--reset" type="reset" onClick={handleReset}>Reset</button>
+            <Button className={"button--reset"} type={"reset"} onClick={handleReset} text={"Reset"} />
             <br></br>
 
             <label className="update__form--label" htmlFor="createdBy">Author:</label>
@@ -102,7 +104,7 @@ const Update = () => {
             />
             <br></br>
 
-            <input className="update__form--submit" type={"submit"} value="Submit" />
+            <Button type={"submit"} text={"Submit"} />
         </form>
     ;
 

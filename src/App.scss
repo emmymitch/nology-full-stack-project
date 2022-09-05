@@ -6,8 +6,8 @@
   background-image: url("./assets/images/white\ marble.jpg");
   background-attachment: fixed;
   background-size: cover;
-  height: 100%;
-  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
 
   display: flex;
   flex-direction: column;

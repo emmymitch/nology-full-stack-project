@@ -22,15 +22,6 @@
             flex-direction: column;
         }
 
-        &--submit, &--reset{
-            font-family: $font-title;
-            font-weight: 600;
-            color: $colour-white;
-            padding: 0.5rem;
-            background-color: $colour-black;
-            border-radius: 25%;
-        }
-
         &--description{
             width: 20rem;
             height: 5rem;

@@ -1,0 +1,13 @@
+@use "../../styles/variables" as *;
+
+.button{
+    margin: 1.5rem;
+    padding: 0.5rem;
+
+    background-color: $colour-black;
+    border-radius: 25%;
+
+    font-family: $font-title;
+    font-weight: 600;
+    color: $colour-white;
+}
