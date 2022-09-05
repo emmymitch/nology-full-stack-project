@@ -55,7 +55,7 @@ const Update = () => {
     }
 
 
-    const pageJSX = 
+    let pageJSX = 
         <form className="update__form" onSubmit={handleSubmit} >
             <button className="update__form--reset" type="reset" onClick={handleReset}>Reset</button>
             <br></br>
@@ -107,7 +107,7 @@ const Update = () => {
     ;
 
     if (formSubmitted){
-        const pageJSX = <h4 className="update__subheading">Entry updated!</h4>
+        pageJSX = <h4 className="update__subheading">Entry updated!</h4>
     }
 
     return (
