@@ -49,19 +49,17 @@ const Update = () => {
     //what the fuck does submitting a form do??? where does the data go??????????
     const handleSubmit = () => {
         setFormSubmitted(true);
-        handleReset();
+        setFormData({...initialData});
     }
 
     const handleReset = () => {
         setFormData({...initialData});
+        setFormSubmitted(false);
     }
 
-
-    let pageJSX = 
+    const submitMessage = <h4 className="update__subheading">Entry updated!</h4>
+    const pageJSX = 
         <form className="update__form" onSubmit={handleSubmit} >
-            <Button className={"button--reset"} type={"reset"} onClick={handleReset} text={"Reset"} />
-            <br></br>
-
             <label className="update__form--label" htmlFor="createdBy">Author:</label>
             <TextInput name={"createdBy"} onBlur={handleChange} placeholder={"Who's authoring this entry?"} />
             <br></br>
@@ -108,15 +106,14 @@ const Update = () => {
         </form>
     ;
 
-    if (formSubmitted){
-        pageJSX = <h4 className="update__subheading">Entry updated!</h4>
-    }
 
     return (
         <div className="update">
             <h1 className="update__title">Add/Update a God</h1>
             <h3 className="update__subheading">Is some information wrong, or do you want to add a new entry? Use this form to do so!</h3>
-            {pageJSX}
+            <Button className={"button--reset"} type={"reset"} onClick={handleReset} text={"Reset"} />
+            <br></br>
+            {formSubmitted ? submitMessage : pageJSX}
         </div>
     )
 }
