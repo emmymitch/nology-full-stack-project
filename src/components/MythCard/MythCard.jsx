@@ -23,13 +23,12 @@ const MythCard = ({myth}) => {
     return (
         <div className="myth-card">
             <div className="myth-card__side">
-                {/* <h2 className="myth-card__side--greek">{myth.greekName.toUpperCase()}</h2> */}
                 {splitGreekCode}
             </div>
 
             <div className="myth-card__main">
-                <h3 className="myth-card__main--english">{myth.englishName}</h3>
-                <h5 className="myth-card__main--domains">God of {domainList}</h5>
+                <h2 className="myth-card__main--english">{myth.englishName}</h2>
+                <h4 className="myth-card__main--domains">God of {domainList}</h4>
                 <br />
                 <p className="myth-card__main--description">{myth.description}</p>
                 <br />

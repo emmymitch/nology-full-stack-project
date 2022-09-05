@@ -1,11 +1,10 @@
 @use "../../styles/variables" as *;
 
 .myth-card{
-    max-width: 19rem;
-    height: 22rem;
+    max-width: 20rem;
+    height: 20rem;
     
     display: flex;
-    border: 2px solid red;
 
     &__side{
         padding: 0.75rem;
@@ -19,7 +18,39 @@
 
         &--greek-char{
             transform: rotateZ(-90deg);
-            color: $colour-white;
+            color: transparent;
+            background-image: url("../../assets/images/terracotta.jpg");
+            background-clip: text;
+            
+        }
+    }
+
+    &__main{
+        padding: 0.5rem;
+        background-image: url("../../assets/images/terracotta.jpg");
+        border: 2px solid rgba($colour-black, 0.9);
+        border-left: none;
+
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: $colour-black;
+
+        &::-webkit-scrollbar{
+            width: 7.5px;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            background-color: $colour-black;
+        }
+
+
+        & * {
+            color: rgba($colour-white, 0.95);
+        }
+
+        &--english{
+            margin: 1rem 0;
+            font-size: 1.75rem;
         }
     }
 }
