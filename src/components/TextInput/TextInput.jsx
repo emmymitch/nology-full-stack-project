@@ -1,6 +1,6 @@
 import "./TextInput.scss";
 
-const TextInput = ({name, className = "", placeholder = "", onBlur = null}) => {
+const TextInput = ({name, className = "", placeholder = "", onBlur = null, onChange = null}) => {
     return (
         <input 
             type="text" 
@@ -9,6 +9,7 @@ const TextInput = ({name, className = "", placeholder = "", onBlur = null}) => {
             placeholder={placeholder} 
             defaultValue=""
             onBlur={onBlur}
+            onChange={onChange}
         />
     )
 }

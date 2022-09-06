@@ -13,4 +13,19 @@
         width: 7.5rem;
         border-radius: 20%;
     }
+
+    &__filters{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__inputs{
+        width: 100%;
+        
+        & * {
+            width: 15rem;
+        }
+    }
 }
