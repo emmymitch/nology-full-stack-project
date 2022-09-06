@@ -14,12 +14,12 @@ const Delete = () => {
     const handleDeleteSearch = async(event) => {
         setNotFound(false)
         event.preventDefault();
-        const searchTerm = event.target[0].value;
-        const response = await fetch(`http://localhost:8080/myth?englishName=${searchTerm}`);
+        console.log(event.target[0].value)
+        const response = await fetch(`http://localhost:8080/myth/${event.target[0].value}`);
 
         if (response.ok){
             const mythToCheck = await response.json();
-            setChosenMyth(mythToCheck[0]);
+            setChosenMyth(mythToCheck);
             setReadyToDelete(true);
             
         } else {
@@ -28,7 +28,7 @@ const Delete = () => {
     }
 
     const deleteEntry = async() => {
-        const response = await fetch(`http://localhost:8080/myth/${chosenMyth.id}`, {
+        await fetch(`http://localhost:8080/myth/${chosenMyth.id}`, {
             method: "DELETE"
         });
         setReadyToDelete(false);
@@ -44,7 +44,7 @@ const Delete = () => {
                 <form onSubmit={readyToDelete? deleteEntry : handleDeleteSearch}>
                     <div className="delete__check">
                         <label htmlFor="deleteSearch">Delete...</label>
-                        <TextInput name={"deleteSearch"} placeholder={"English name..."} />
+                        <TextInput name={"deleteSearch"} placeholder={"ID..."} />
                         <Button type={"submit"} text={"Submit"} disabled={readyToDelete} />
                     </div>
 

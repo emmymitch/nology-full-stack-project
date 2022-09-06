@@ -38,6 +38,8 @@ const MythCard = ({myth}) => {
                         {identifierList}
                     </ul>
                 </div>
+                <br />
+                <p>Unique ID: {myth.id}</p>
             
             </div>
         </div>
