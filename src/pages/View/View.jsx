@@ -23,10 +23,25 @@ const View = () => {
                 case "nameSearch":
                     return (myth.englishName.toLowerCase().startsWith(event.target.value.toLowerCase()) 
                             || myth.greekName.toLowerCase().startsWith(event.target.value.toLowerCase()))
+
                 case "domainSearch":
-                    return myth.majorDomains.includes(event.target.value.toLowerCase())
-                case "identifierSearch": //CHANGE DATA SO ALL IN LOWER CASE
-                    return myth.identifiers.includes(event.target.value.toLowerCase())
+                    let hasDomain = false;
+                    for (let i=0; i<myth.majorDomains.length; i++){
+                        if (myth.majorDomains[i].toLowerCase().startsWith(event.target.value.toLowerCase())){
+                            hasDomain = true;
+                        }
+                    }
+                    return hasDomain;
+
+                case "identifierSearch":
+                    let hasIdentifier = false;
+                    for (let i=0; i<myth.identifiers.length; i++){
+                        if (myth.identifiers[i].toLowerCase().startsWith(event.target.value.toLowerCase())){
+                            hasIdentifier = true;
+                        }
+                    }
+                    return hasIdentifier;
+
                 default:
                     return myth.id;
             }
@@ -34,9 +49,9 @@ const View = () => {
         return newMyths;
     }
 
-    useEffect(() => {
-        getMyths();
-    }, [])
+    // useEffect(() => {
+    //     getMyths();
+    // }, [])
 
     return (
         <div className="view">
