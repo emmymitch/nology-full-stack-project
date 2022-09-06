@@ -43,8 +43,8 @@ const Delete = () => {
             {!deleted && 
                 <form onSubmit={readyToDelete? deleteEntry : handleDeleteSearch}>
                     <div className="delete__check">
-                        <label htmlFor="deleteSearch">Delete...</label>
-                        <TextInput name={"deleteSearch"} placeholder={"ID..."} />
+                        <label htmlFor="deleteSearch">Card ID:</label>
+                        <TextInput name={"deleteSearch"} placeholder={"Find the unique ID at the bottom of each card"} />
                         <Button type={"submit"} text={"Submit"} disabled={readyToDelete} />
                     </div>
 

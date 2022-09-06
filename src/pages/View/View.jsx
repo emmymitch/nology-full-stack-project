@@ -42,7 +42,7 @@ const View = () => {
                     return hasIdentifier;
 
                 default:
-                    return myth.id;
+                    return myth;
             }
         })
         return newMyths;
