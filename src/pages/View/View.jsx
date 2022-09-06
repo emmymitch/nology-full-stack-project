@@ -1,8 +1,7 @@
 import "./View.scss";
 import MythCardContainer from "../../containers/MythCardContainer/MythCardContainer";
 import Button from "../../components/Button/Button";
-import { useEffect, useState } from "react";
-import myths from "../../data/mockMyth";
+import { useState } from "react";
 import TextInput from "../../components/TextInput/TextInput";
 
 const View = () => {
@@ -48,10 +47,6 @@ const View = () => {
         })
         return newMyths;
     }
-
-    // useEffect(() => {
-    //     getMyths();
-    // }, [])
 
     return (
         <div className="view">
