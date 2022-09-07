@@ -14,7 +14,6 @@ const Delete = () => {
     const handleDeleteSearch = async(event) => {
         setNotFound(false)
         event.preventDefault();
-        console.log(event.target[0].value)
         const response = await fetch(`http://localhost:8080/myth/${event.target[0].value}`);
 
         if (response.ok){

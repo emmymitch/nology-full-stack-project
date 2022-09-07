@@ -24,7 +24,7 @@ const Add = () => {
             }
 
             //Post data to backend
-            await fetch(`http://localhost:8080/myth`, {
+            await fetch(`http://localhost:8080/myth/create`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json; charset=UTF-8"

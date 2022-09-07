@@ -16,12 +16,15 @@ const Home = () => {
             
             <Link to="/view" className="home__link">View</Link>
             <p className="home__explanation">Show all characters or search and filter for who you want.</p>
+
+            <Link to="/add" className="home__link">Add</Link>
+            <p className="home__explanation">Add a new entry to the database.</p>
             
             <Link to="/update" className="home__link">Update</Link>
-            <p className="home__explanation">Update the database by adding a new entry or editing an existing one</p>
+            <p className="home__explanation">Edit an existing entity.</p>
             
             <Link to="/delete" className="home__link">Delete</Link>
-            <p className="home__explanation">Something wrong? Delete an entry from the database</p>
+            <p className="home__explanation">Something wrong? Delete an entry from the database.</p>
         </div>
     )
 }
