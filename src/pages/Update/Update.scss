@@ -9,4 +9,74 @@
     & > * {
         margin: 1rem 0;
     }
+
+    &__subtitle{
+        margin: 1rem 0 -4rem 0;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &--style-div{
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 0;
+        }
+
+        &--input-div{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--label{
+            margin: 1.5rem 0 0.5rem 0;;
+        }
+
+        &--request{
+            margin: 0 0.5rem;
+        }
+    }
+
+    &__check{
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--desktop{
+            display: none;
+        }
+
+
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .update{
+        &__form{
+            &--style-div{
+                flex-direction: row;
+            }
+
+            &--input-div{
+                margin: 0 1rem;
+            }
+        }
+
+        &__check{
+            flex-direction: row;
+
+            &--desktop{
+                display: flex;
+                align-items: center;
+            }
+
+            &--arrow{
+                margin: 0 2.5rem;
+            }
+        }
+    }
 }
