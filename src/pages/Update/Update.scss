@@ -10,9 +10,11 @@
     }
 
     &__form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        &--style-div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         &--label{
             margin: 0.75rem 0 0.25rem 0;
