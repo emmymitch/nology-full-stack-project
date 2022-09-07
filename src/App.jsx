@@ -2,6 +2,7 @@ import './App.scss';
 
 import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
+import Add from './pages/Add/Add';
 import Update from "./pages/Update/Update";
 import Delete from "./pages/Delete/Delete";
 import View from "./pages/View/View";
@@ -29,6 +30,7 @@ const App = () => {
         <div className="main">
           <Routes>
             <Route path="/home" element={<Home />} />
+            <Route path="/add" element={<Add />} />
             <Route path="/update" element={<Update />} />
             <Route path="/delete" element={<Delete />} />
             <Route path="/view" element={<View />} />

@@ -1,0 +1,34 @@
+@use "../../styles/variables" as *;
+
+.add{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > * {
+        margin: 1rem 0;
+    }
+
+    &__form{
+        &--style-div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &--label{
+            margin: 0.75rem 0 0.25rem 0;
+        }
+
+        &--domain-list, &--identifier-list{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--description{
+            width: 20rem;
+            height: 5rem;
+            font-size: 0.85rem;
+        }
+    }
+}
