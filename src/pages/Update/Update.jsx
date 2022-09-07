@@ -43,27 +43,28 @@ const Update = () => {
         setDataToChange(newData);
     }
 
-    const updateEntry = async(categoryToChange, newValue) => {
-        const newData = {id: chosenMyth.id};
-        switch (categoryToChange) {
-            case "englishName": newData.englishName = newValue; break;
-            case "greekName": newData.greekName = newValue; break;
-            case "majorDomains": newData.majorDomains = newValue.split(","); break;
-            case "identifiers": newData.identifiers = newValue.split(","); break;
-            case "description": newData.description = newValue; break;
-            default: break;
+    const updateEntry = async() => {
+        if (Object.is(chosenMyth, dataToChange)){
+            alert("You've not changed any data!")
+            return;
         }
-        
-        await fetch(`http://localhost:8080/myth/update`, {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
-            },
-            body: JSON.stringify({newData})
-        });
 
-        setReadyToUpdate(false);
-        setUpdated(true);
+        try{
+            await fetch(`http://localhost:8080/myth/update`, {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                },
+                body: JSON.stringify(dataToChange)
+            }); 
+
+            setReadyToUpdate(false);
+            setUpdated(true);
+
+        } catch (error) {
+            console.log(error);
+        }
+
     }
 
     return(
@@ -127,6 +128,10 @@ const Update = () => {
                     </div>
                 }
             </form>
+
+            {updated && 
+                <p className="update__success-message">Successfully updated {dataToChange.englishName}.</p>
+            }
 
         </div>
     )
