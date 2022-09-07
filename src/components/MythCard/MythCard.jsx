@@ -1,5 +1,6 @@
 import "./MythCard.scss";
 import {Link} from "react-router-dom"
+import Button from "../Button/Button";
 
 const MythCard = ({myth}) => {
 
@@ -42,7 +43,9 @@ const MythCard = ({myth}) => {
                 <br />
                 <p>Unique ID: {myth.id}</p>
 
-                <Link to={`/myth/${myth.id}`} className="myth-card__readmore">Read More</Link>
+                <Link to={`/myth/${myth.id}`} className="myth-card__readmore">
+                    <Button text="Read More" className="myth-card__readmore" />
+                </Link>
             </div>
         </div>
     )
