@@ -1,4 +1,5 @@
 import "./MythCard.scss";
+import {Link} from "react-router-dom"
 
 const MythCard = ({myth}) => {
 
@@ -40,7 +41,8 @@ const MythCard = ({myth}) => {
                 </div>
                 <br />
                 <p>Unique ID: {myth.id}</p>
-            
+
+                <Link to={`/myth/${myth.id}`} className="myth-card__readmore">Read More</Link>
             </div>
         </div>
     )

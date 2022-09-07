@@ -6,7 +6,7 @@ import Add from './pages/Add/Add';
 import Update from "./pages/Update/Update";
 import Delete from "./pages/Delete/Delete";
 import View from "./pages/View/View";
-import Being from "./pages/Being/Being";
+import Myth from "./pages/Myth/Myth";
 import Nav from './components/Nav/Nav';
 
 const App = () => {
@@ -34,7 +34,7 @@ const App = () => {
             <Route path="/update" element={<Update />} />
             <Route path="/delete" element={<Delete />} />
             <Route path="/view" element={<View />} />
-            <Route path="/view/:being" element={<Being />} />
+            <Route path="/myth/:mythId" element={<Myth />} />
           {/* Redirect all other pages to home */}
             <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>
