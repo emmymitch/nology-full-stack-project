@@ -35,6 +35,7 @@ const Myth = () => {
     
     useEffect(() => {
         getMyth();
+    // eslint-disable-next-line
     }, []);
 
     if (!isLoaded){
