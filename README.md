@@ -8,7 +8,7 @@ This project was completed as a final, full-stack project for the _nology course
 <br />
 
 # Personal Greek Mythology Database
-Live site: https://emmymitch.github.io/nology-full-stack-project
+Live site: Not Ready
 
 Given my interest in Greek mythology, and how complicated it can be, I was inspired to create a personal database of mythological entities that I can use for reference.
 
