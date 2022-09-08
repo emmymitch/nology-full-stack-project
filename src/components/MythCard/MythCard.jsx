@@ -21,6 +21,9 @@ const MythCard = ({myth}) => {
         return <li key={identifier}>{identifier}</li>;
     })
 
+    const firstFullStop = myth.description.indexOf(".");
+    const shortDescription = myth.description.substring(0, firstFullStop>=0? firstFullStop+1 : myth.description.length);
+
 
     return (
         <div className="myth-card">
@@ -32,7 +35,7 @@ const MythCard = ({myth}) => {
                 <h2 className="myth-card__main--english">{myth.englishName}</h2>
                 <h4 className="myth-card__main--domains">God of {domainList}</h4>
                 <br />
-                <p className="myth-card__main--description">{myth.description}</p>
+                <p className="myth-card__main--description">{shortDescription}</p>
                 <br />
                 <div className="myth-card__main--identifiers">
                     <p>Identify by:</p>

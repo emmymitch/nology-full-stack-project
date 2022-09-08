@@ -1,0 +1,22 @@
+.myth{
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > * {
+        margin: 1rem 0;
+    }
+
+    &__heading{
+        &--name{
+            margin-bottom: 1rem;
+            max-width: 100vw;
+            font-size: 3.25rem;
+        }
+    }
+
+    &__title{
+        margin: 0.5rem;
+    }
+}

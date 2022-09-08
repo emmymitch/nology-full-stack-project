@@ -49,16 +49,20 @@ const Myth = () => {
     if (isLoaded){
         return (
             <div className="myth">
-                <div className="myth__title">
-                    <h1>{myth.englishName}</h1>
+                <div className="myth__heading">
+                    <h1 className="myth__heading--name">{myth.englishName}</h1>
                     <h2>GOD OF</h2>
                     <h2>{arrStrings.domains}</h2>
                 </div>
 
-                <p>{myth.description}</p>
+                <div className="myth__description">
+                    <p>{myth.description}</p>
+                </div>
 
-                <h4>Sacred symbols and common identifiers</h4>
-                <p>{arrStrings.identifiers}</p>
+                <div className="myth__identifiers">
+                    <h3 className="myth__title">Sacred symbols and common identifiers</h3>
+                    <p>{arrStrings.identifiers}</p>
+                </div>
             </div>
         )
     }
