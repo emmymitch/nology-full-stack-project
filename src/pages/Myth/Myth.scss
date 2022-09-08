@@ -10,9 +10,12 @@
 
     &__heading{
         &--name{
-            margin-bottom: 1rem;
             max-width: 100vw;
             font-size: 3.25rem;
+        }
+
+        &--godof{
+            margin-top: 1.5rem;
         }
     }
 

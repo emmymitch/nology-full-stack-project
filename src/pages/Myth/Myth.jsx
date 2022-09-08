@@ -53,7 +53,8 @@ const Myth = () => {
             <div className="myth">
                 <div className="myth__heading">
                     <h1 className="myth__heading--name">{myth.englishName}</h1>
-                    <h2>GOD OF</h2>
+                    <h1>{myth.greekName}</h1>
+                    <h2 className="myth__heading--godof">GOD OF</h2>
                     <h2>{arrStrings.domains}</h2>
                 </div>
 
