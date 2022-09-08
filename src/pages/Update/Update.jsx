@@ -3,7 +3,6 @@ import Button from "../../components/Button/Button";
 import TextInput from "../../components/TextInput/TextInput";
 import MythCard from "../../components/MythCard/MythCard";
 import { useState } from "react";
-import Dropdown from "../../components/Dropdown/Dropdown";
 
 
 const Update = () => {
@@ -84,7 +83,13 @@ const Update = () => {
 
                     <div className="update__form--input-div">
                         <label className="update__form--label" htmlFor="entry-categories">Category to change:</label>
-                        <Dropdown className="update__form--dropdown" name="entry-categories" />
+                        <select className="update__form--dropdown" name="entry-categories">
+                            <option value="englishName">English Name</option>
+                            <option value="greekName">Greek Name</option>
+                            <option value="majorDomains">Major Domains</option>
+                            <option value="identifiers">Identifiers</option>
+                            <option value="description">Description</option>
+                        </select>
                     </div>
 
                     <div className="update__form--input-div">
