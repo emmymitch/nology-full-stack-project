@@ -12,7 +12,11 @@ const View = () => {
 
     const getMyths = async() => {
         const response = await fetch("http://localhost:8080/myths");
-        let mythsToRender = await response.json();
+        return await response.json();
+    }
+
+    useEffect(() => {
+        let mythsToRender = getMyths();
 
         mythsToRender = searchMyths(mythsToRender, searchBy);
         mythsToRender = sortMyths(mythsToRender, sort.category);
@@ -22,16 +26,12 @@ const View = () => {
         }
 
         setFilteredMyths(mythsToRender);
-    }
+
+    }, [searchBy, sort.category, sort.direction])
 
     const handleSearchChange = (event) => {setSearchBy({category: event.target.name, value: event.target.value})}
     const handleSortChange = (event) => {setSort({...sort, category: event.target.value})};
     const handleSortDirectionChange = (event) => {setSort({...sort, direction: event.target.value})};
-
-    useEffect(() => {
-        getMyths();
-    // eslint-disable-next-line
-    }, [searchBy, sort.category, sort.direction])
 
     return (
         <div className="view">

@@ -8,7 +8,7 @@ const Myth = () => {
     const [myth, setMyth] = useState({});
     const [arrStrings, setArrStrings] = useState({});
 
-    const getMyth = async() => {
+    const getMyth = async(mythId) => {
         const response = await fetch(`http://localhost:8080/myth/${mythId}`);
         const mythToLoad = await response.json();
 
@@ -34,11 +34,10 @@ const Myth = () => {
         setArrStrings({domains: domains, identifiers: identifiers});
         setIsLoaded(true);
     }
-    
+
     useEffect(() => {
-        getMyth();
-    // eslint-disable-next-line
-    }, []);
+        getMyth(mythId);
+    }, [mythId]);
 
     if (!isLoaded){
         return (
