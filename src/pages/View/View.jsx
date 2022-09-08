@@ -4,6 +4,7 @@ import Button from "../../components/Button/Button";
 import { useEffect, useState } from "react";
 import TextInput from "../../components/TextInput/TextInput";
 import sortMyths from "../../services/sortMyths.js";
+import searchMyths from "../../services/searchMyths";
 
 const View = () => {
     const [filteredMyths, setFilteredMyths] = useState([]);
@@ -14,7 +15,6 @@ const View = () => {
         const response = await fetch("http://localhost:8080/myths");
         let mythsToRender = await response.json();
 
-        console.log(searchBy);
         mythsToRender = searchMyths(mythsToRender, searchBy);
         mythsToRender = sortMyths(mythsToRender, sort.category);
 
@@ -24,65 +24,6 @@ const View = () => {
 
         setFilteredMyths(mythsToRender);
     }
-
-    const searchMyths = (myths, search) => {
-        const newMyths = myths.filter((myth) => {
-            switch(search.category){
-                case "idSearch":
-                    return (myth.id === Number(search.value));
-
-                case "nameSearch":
-                    return (myth.englishName.toLowerCase().startsWith(search.value.toLowerCase()) 
-                            || myth.greekName.toLowerCase().startsWith(search.value.toLowerCase()))
-
-                case "domainSearch":
-                    let hasDomain = false;
-                    for (let i=0; i<myth.majorDomains.length; i++){
-                        if (myth.majorDomains[i].toLowerCase().startsWith(search.value.toLowerCase())){
-                            hasDomain = true;
-                        }
-                    }
-                    return hasDomain;
-
-                case "identifierSearch":
-                    let hasIdentifier = false;
-                    for (let i=0; i<myth.identifiers.length; i++){
-                        if (myth.identifiers[i].toLowerCase().startsWith(search.value.toLowerCase())){
-                            hasIdentifier = true;
-                        }
-                    }
-                    return hasIdentifier;
-
-                default:
-                    return myth;
-            }
-        })
-        return newMyths;
-    }
-
-    // const sortMyths = (event) => {
-    //     switch (event.target.value) {
-    //         case "id":
-    //             setFilteredMyths([...filteredMyths.sort((a, b) => a - b)]);
-    //             break;
-    //         case "englishName": 
-    //             setFilteredMyths([...filteredMyths.sort((a, b) => a.englishName - b.englishName)]); 
-    //             break;
-    //         case "greekName": 
-    //             setFilteredMyths([...filteredMyths.sort((a, b) => a.greekName - b.greekName)]); 
-    //             break;
-    //         case "majorDomains": 
-    //             setFilteredMyths([...filteredMyths.sort((a, b) => a.majorDomains[0] - b.majorDomains[0])]); 
-    //             break;
-    //         case "identifiers": 
-    //             setFilteredMyths([...filteredMyths.sort((a, b) => a.identifiers[0] - b.identifiers[0])]); 
-    //             break;
-    //         case "description": 
-    //             setFilteredMyths([...filteredMyths.sort((a, b) => a.description.charAt(0) - b.description.charAt(0))]); 
-    //             break;
-    //         default: break;
-    //     }
-    // }
 
     const handleSearchChange = (event) => {setSearchBy({category: event.target.name, value: event.target.value})}
     const handleSortChange = (event) => {setSort({...sort, category: event.target.value})};
