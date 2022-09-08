@@ -1,0 +1,426 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the Add page 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="add"
+      >
+        <h1
+          class="add__title"
+        >
+          Add
+        </h1>
+        <h3
+          class="add__subheading"
+        >
+          Missing someone? Add them to the database here!
+        </h3>
+        <form
+          class="add__form"
+        >
+          <button
+            class="button button--reset"
+            type="reset"
+          >
+            Reset
+          </button>
+          <br />
+          <div
+            class="add__form--style-div"
+          >
+            <label
+              class="add__form--label"
+              for="createdBy"
+            >
+              Author:
+            </label>
+            <input
+              class="text-input "
+              name="createdBy"
+              placeholder="Who's authoring this entry?"
+              type="text"
+              value=""
+            />
+            <br />
+            <label
+              class="add__form--label"
+              for="englishName"
+            >
+              English Name:
+            </label>
+            <input
+              class="text-input "
+              name="englishName"
+              placeholder=""
+              type="text"
+              value=""
+            />
+            <br />
+            <label
+              class="add__form--label"
+              for="greekName"
+            >
+              Greek Name:
+            </label>
+            <input
+              class="text-input "
+              name="greekName"
+              placeholder="Use Greek characters only"
+              type="text"
+              value=""
+            />
+            <br />
+            <label
+              class="add__form--label"
+              for="majorDomains"
+            >
+              Major Domains:
+            </label>
+            <div
+              class="add__form--domain-list"
+            >
+              <input
+                class="text-input "
+                name="majorDomains"
+                placeholder=""
+                type="text"
+                value=""
+              />
+              <input
+                class="text-input "
+                name="majorDomains"
+                placeholder=""
+                type="text"
+                value=""
+              />
+              <input
+                class="text-input "
+                name="majorDomains"
+                placeholder=""
+                type="text"
+                value=""
+              />
+              <input
+                class="text-input "
+                name="majorDomains"
+                placeholder=""
+                type="text"
+                value=""
+              />
+              <input
+                class="text-input "
+                name="majorDomains"
+                placeholder=""
+                type="text"
+                value=""
+              />
+            </div>
+            <br />
+            <label
+              class="add__form--label"
+              for="identifiers"
+            >
+              Identifiers:
+            </label>
+            <div
+              class="add__form--identifier-list"
+            >
+              <input
+                class="text-input "
+                name="identifiers"
+                placeholder="e.g. lightning bolts and eagles for Zeus"
+                type="text"
+                value=""
+              />
+              <input
+                class="text-input "
+                name="identifiers"
+                placeholder="e.g. owls, olives, Aegis for Athena"
+                type="text"
+                value=""
+              />
+              <input
+                class="text-input "
+                name="identifiers"
+                placeholder="e.g. lyre, bow, laurel for Apollo"
+                type="text"
+                value=""
+              />
+              <input
+                class="text-input "
+                name="identifiers"
+                placeholder="e.g. a caduceus and winged sandals for Hermes"
+                type="text"
+                value=""
+              />
+              <input
+                class="text-input "
+                name="identifiers"
+                placeholder="e.g. doves and roses for Aphrodite"
+                type="text"
+                value=""
+              />
+            </div>
+            <br />
+            <label
+              class="add__form--label"
+              for="description"
+            >
+              Description:
+            </label>
+            <textarea
+              class="add__form--description"
+              name="description"
+              placeholder="A short description of the god. Exclude personal opinions."
+            />
+            <br />
+            <button
+              class="button "
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="add"
+    >
+      <h1
+        class="add__title"
+      >
+        Add
+      </h1>
+      <h3
+        class="add__subheading"
+      >
+        Missing someone? Add them to the database here!
+      </h3>
+      <form
+        class="add__form"
+      >
+        <button
+          class="button button--reset"
+          type="reset"
+        >
+          Reset
+        </button>
+        <br />
+        <div
+          class="add__form--style-div"
+        >
+          <label
+            class="add__form--label"
+            for="createdBy"
+          >
+            Author:
+          </label>
+          <input
+            class="text-input "
+            name="createdBy"
+            placeholder="Who's authoring this entry?"
+            type="text"
+            value=""
+          />
+          <br />
+          <label
+            class="add__form--label"
+            for="englishName"
+          >
+            English Name:
+          </label>
+          <input
+            class="text-input "
+            name="englishName"
+            placeholder=""
+            type="text"
+            value=""
+          />
+          <br />
+          <label
+            class="add__form--label"
+            for="greekName"
+          >
+            Greek Name:
+          </label>
+          <input
+            class="text-input "
+            name="greekName"
+            placeholder="Use Greek characters only"
+            type="text"
+            value=""
+          />
+          <br />
+          <label
+            class="add__form--label"
+            for="majorDomains"
+          >
+            Major Domains:
+          </label>
+          <div
+            class="add__form--domain-list"
+          >
+            <input
+              class="text-input "
+              name="majorDomains"
+              placeholder=""
+              type="text"
+              value=""
+            />
+            <input
+              class="text-input "
+              name="majorDomains"
+              placeholder=""
+              type="text"
+              value=""
+            />
+            <input
+              class="text-input "
+              name="majorDomains"
+              placeholder=""
+              type="text"
+              value=""
+            />
+            <input
+              class="text-input "
+              name="majorDomains"
+              placeholder=""
+              type="text"
+              value=""
+            />
+            <input
+              class="text-input "
+              name="majorDomains"
+              placeholder=""
+              type="text"
+              value=""
+            />
+          </div>
+          <br />
+          <label
+            class="add__form--label"
+            for="identifiers"
+          >
+            Identifiers:
+          </label>
+          <div
+            class="add__form--identifier-list"
+          >
+            <input
+              class="text-input "
+              name="identifiers"
+              placeholder="e.g. lightning bolts and eagles for Zeus"
+              type="text"
+              value=""
+            />
+            <input
+              class="text-input "
+              name="identifiers"
+              placeholder="e.g. owls, olives, Aegis for Athena"
+              type="text"
+              value=""
+            />
+            <input
+              class="text-input "
+              name="identifiers"
+              placeholder="e.g. lyre, bow, laurel for Apollo"
+              type="text"
+              value=""
+            />
+            <input
+              class="text-input "
+              name="identifiers"
+              placeholder="e.g. a caduceus and winged sandals for Hermes"
+              type="text"
+              value=""
+            />
+            <input
+              class="text-input "
+              name="identifiers"
+              placeholder="e.g. doves and roses for Aphrodite"
+              type="text"
+              value=""
+            />
+          </div>
+          <br />
+          <label
+            class="add__form--label"
+            for="description"
+          >
+            Description:
+          </label>
+          <textarea
+            class="add__form--description"
+            name="description"
+            placeholder="A short description of the god. Exclude personal opinions."
+          />
+          <br />
+          <button
+            class="button "
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

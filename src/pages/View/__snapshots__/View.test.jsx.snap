@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the View page 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="view"
+      >
+        <h1>
+          View
+        </h1>
+        <h3>
+          Use this page to find the gods you want to know about.
+        </h3>
+        <div
+          class="view__filters"
+        >
+          <div
+            class="view__sort"
+          >
+            <label
+              for="sortMyths"
+            >
+              Sort by: 
+            </label>
+            <div
+              class="view__sort--inputs"
+            >
+              <select
+                class="view__sort--dropdown"
+                name="sortMyths"
+              >
+                <option
+                  class="view__sort--option"
+                  value="id"
+                >
+                  ID
+                </option>
+                <option
+                  class="view__sort--option"
+                  value="englishName"
+                >
+                  English Name
+                </option>
+                <option
+                  class="view__sort--option"
+                  value="greekName"
+                >
+                  Greek Name
+                </option>
+              </select>
+              <select
+                class="view__sort--dropdown"
+                name="sortMyths"
+              >
+                <option
+                  class="view__sort--option"
+                  value="AZ"
+                >
+                  A-Z
+                </option>
+                <option
+                  class="view__sort--option"
+                  value="ZA"
+                >
+                  Z-A
+                </option>
+              </select>
+            </div>
+          </div>
+          <div
+            class="view__search"
+          >
+            <label
+              for="search"
+            >
+              Search...
+            </label>
+            <div
+              class="view__search--inputs"
+            >
+              <input
+                class="view__search--ids"
+                name="idSearch"
+                placeholder="By id..."
+                type="number"
+              />
+              <input
+                class="text-input view__search--names"
+                name="nameSearch"
+                placeholder="By name..."
+                type="text"
+                value=""
+              />
+              <input
+                class="text-input view__search--domains"
+                name="domainSearch"
+                placeholder="By domain..."
+                type="text"
+                value=""
+              />
+              <input
+                class="text-input view__search--identifier"
+                name="identifierSearch"
+                placeholder="By identifier..."
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="myth-cards"
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="view"
+    >
+      <h1>
+        View
+      </h1>
+      <h3>
+        Use this page to find the gods you want to know about.
+      </h3>
+      <div
+        class="view__filters"
+      >
+        <div
+          class="view__sort"
+        >
+          <label
+            for="sortMyths"
+          >
+            Sort by: 
+          </label>
+          <div
+            class="view__sort--inputs"
+          >
+            <select
+              class="view__sort--dropdown"
+              name="sortMyths"
+            >
+              <option
+                class="view__sort--option"
+                value="id"
+              >
+                ID
+              </option>
+              <option
+                class="view__sort--option"
+                value="englishName"
+              >
+                English Name
+              </option>
+              <option
+                class="view__sort--option"
+                value="greekName"
+              >
+                Greek Name
+              </option>
+            </select>
+            <select
+              class="view__sort--dropdown"
+              name="sortMyths"
+            >
+              <option
+                class="view__sort--option"
+                value="AZ"
+              >
+                A-Z
+              </option>
+              <option
+                class="view__sort--option"
+                value="ZA"
+              >
+                Z-A
+              </option>
+            </select>
+          </div>
+        </div>
+        <div
+          class="view__search"
+        >
+          <label
+            for="search"
+          >
+            Search...
+          </label>
+          <div
+            class="view__search--inputs"
+          >
+            <input
+              class="view__search--ids"
+              name="idSearch"
+              placeholder="By id..."
+              type="number"
+            />
+            <input
+              class="text-input view__search--names"
+              name="nameSearch"
+              placeholder="By name..."
+              type="text"
+              value=""
+            />
+            <input
+              class="text-input view__search--domains"
+              name="domainSearch"
+              placeholder="By domain..."
+              type="text"
+              value=""
+            />
+            <input
+              class="text-input view__search--identifier"
+              name="identifierSearch"
+              placeholder="By identifier..."
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="myth-cards"
+      />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
