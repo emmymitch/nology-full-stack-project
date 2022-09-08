@@ -10,7 +10,9 @@ const MythCard = ({myth}) => {
     })
 
     const domainList = myth.majorDomains.map((domain, index) => {
-        if (index !== myth.majorDomains.length - 1){
+        if (myth.majorDomains.length === 1){
+            return `${domain}.`;
+        } else if (index !== myth.majorDomains.length - 1){
             return `${domain}, `;
         } else {
             return `and ${domain}.`;

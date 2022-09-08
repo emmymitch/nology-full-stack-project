@@ -13,7 +13,9 @@ const Myth = () => {
         const mythToLoad = await response.json();
 
         const domains = mythToLoad.majorDomains.map((domain, index) => {
-            if (index !== mythToLoad.majorDomains.length - 1){
+            if (mythToLoad.majorDomains.length === 1){
+                return `${domain}`;
+            } else if (index !== mythToLoad.majorDomains.length - 1){
                 return ` ${domain} ·`;
             } else {
                 return ` ${domain}`;
