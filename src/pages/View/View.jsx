@@ -19,6 +19,9 @@ const View = () => {
     const handleSearchChange = (event, myths) => {
         const newMyths = myths.filter((myth) => {
             switch(event.target.name){
+                case "idSearch":
+                    return (myth.id === Number(event.target.value));
+
                 case "nameSearch":
                     return (myth.englishName.toLowerCase().startsWith(event.target.value.toLowerCase()) 
                             || myth.greekName.toLowerCase().startsWith(event.target.value.toLowerCase()))
@@ -59,6 +62,7 @@ const View = () => {
                 {/* searchbar for english name & greek */}
                 <label htmlFor="search">Search...</label>
                 <div className="view__inputs">
+                    <input type="number" name="idSearch" className="view__filters--ids" placeholder="By id..." onChange={getMyths} />
                     <TextInput name="nameSearch" className="view__filters--names" placeholder="By name..." onChange={getMyths} />
                     {/* searchbar for domains */}
                     <TextInput name="domainSearch" className="view__filters--domains" placeholder="By domain..." onChange={getMyths} />
