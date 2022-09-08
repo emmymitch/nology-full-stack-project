@@ -15,11 +15,11 @@ const Add = () => {
             const domains = [];
             const identifiers = [];
 
-            for (let i=3; i<8; i++){
+            for (let i=4; i<9; i++){
                 if (event.target[i].value !== ""){ domains.push(event.target[i].value) }
             }
 
-            for (let i=8; i<13; i++){
+            for (let i=9; i<14; i++){
                 if (event.target[i].value !== ""){ identifiers.push(event.target[i].value) }
             }
 
@@ -30,12 +30,12 @@ const Add = () => {
                     "Content-type": "application/json; charset=UTF-8"
                 },
                 body: JSON.stringify({
-                    createdBy: `${event.target[0].value}`,
-                    englishName: `${event.target[1].value}`,
-                    greekName: `${event.target[2].value}`,
+                    createdBy: `${event.target[1].value}`,
+                    englishName: `${event.target[2].value}`,
+                    greekName: `${event.target[3].value}`,
                     majorDomains: domains,
                     identifiers: identifiers,
-                    description: `${event.target[13].value}`
+                    description: `${event.target[14].value}`
                 })
             })
 
