@@ -11,4 +11,14 @@
     font-family: $font-title;
     font-weight: 600;
     color: $colour-white;
+
+    border: 2px outset rgba($colour-white, 0.5);
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &:active{
+        border: 2px inset rgba($colour-white, 0.5);
+    }
 }
