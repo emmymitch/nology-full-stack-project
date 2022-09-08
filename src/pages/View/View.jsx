@@ -1,6 +1,5 @@
 import "./View.scss";
 import MythCardContainer from "../../containers/MythCardContainer/MythCardContainer";
-import Button from "../../components/Button/Button";
 import { useEffect, useState } from "react";
 import TextInput from "../../components/TextInput/TextInput";
 import sortMyths from "../../services/sortMyths.js";
