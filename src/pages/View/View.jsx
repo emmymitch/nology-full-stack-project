@@ -7,7 +7,7 @@ import searchMyths from "../../services/searchMyths";
 
 const View = () => {
     const [filteredMyths, setFilteredMyths] = useState([]);
-    const [searchBy, setSearchBy] = useState({})
+    const [searchBy, setSearchBy] = useState({category: "", value: ""})
     const [sort, setSort] = useState({category: "id", direction: "AZ"})
 
     const getMyths = async() => {
